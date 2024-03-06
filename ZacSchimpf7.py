@@ -27,12 +27,12 @@ def power(base_input, exponent):
             warn("Exponent value provided is not a whole numeric value.")
         return None
 
-    if exponent < 0:
-        return None
+    if exponent == 1:
+        return base
     elif exponent > 1:
         return base * power(base, exponent - 1)
     else:
-        return base
+        return None
 
 
 def cat_ears(quantity):
@@ -47,10 +47,12 @@ def cat_ears(quantity):
         warn("Exponent value provided is not a whole numeric value.")
         return None
 
-    if quantity < 1:
+    if quantity > 0:
+        return 2 + cat_ears(quantity - 1)
+    if quantity == 0:
         return 0
     else:
-        return 2 + cat_ears(quantity - 1)
+        return None
 
 
 def alien_ears(quantity):

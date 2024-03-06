@@ -6,7 +6,6 @@
 
     https://github.com/strixPanahu/csci1620_lab07
 """
-
 from warnings import warn
 
 
@@ -74,6 +73,3 @@ def alien_ears(quantity):
         return 2 + alien_ears(quantity - 1)
     else:  # if value is odd
         return 3 + alien_ears(quantity - 1)
-
-
-print(alien_ears(0))
